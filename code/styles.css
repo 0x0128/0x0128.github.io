@@ -1,0 +1,1084 @@
+/* General */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden; /* Oculta el desbordamiento horizontal */
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+/* Estilos del Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espacio entre logo y menú */
+  align-items: center; /* Centrar verticalmente los elementos */
+  padding: 20px;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+}
+
+.navbar-logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px; /* Tamaño adecuado para el logo */
+  font-weight: bold;
+  display: flex;
+  align-items: center; /* Centrar el contenido verticalmente */
+  margin-left: 100px;
+}
+
+.logo-0x {
+  color: #0074ff; /* Color azul para "0x" */
+}
+
+.logo-0128 {
+  color: #ffffff;  /* Color blanco para "0128" */
+}
+
+/* Navbar menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  margin-right: 20px;
+  gap: 50px;
+  margin-left: 20px;
+}
+
+
+
+.navbar-menu a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+  color: #0074ff; /* Color de hover */
+}
+
+
+
+
+
+/* Estilo de las secciones */
+section {
+  padding: 80px 20px; /* Ajusta el padding para evitar que ocupe mucho espacio vertical */
+  min-height: calc(100vh - 60px); /* Altura mínima: la altura total menos el tamaño del navbar */
+  overflow-y: auto; /* Permite que el contenido adicional se despliegue, si lo hay */
+}
+
+/* Evitar desbordamiento en imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Animación de subrayado en hover */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  background-color: #ff5722;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Sección Home */
+.home {
+  display: flex;
+  justify-content: space-between; /* Espacio entre los textos y el logo */
+  align-items: center; /* Centrar verticalmente */
+  padding: 50px; /* Espacio interno */
+  background-image: url('../imagenes/fondo-home.jpg'); /* Cambia esto por la ruta de tu imagen de fondo */
+  background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centrar la imagen de fondo */
+  min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+}
+
+/* Contenido de texto */
+.home-content {
+  display: flex;
+  flex-direction: column; /* Para apilar el texto */
+  max-width: 60%; /* Máximo ancho para el texto */
+  text-align: left;
+  margin-left: 100px; /* Ajusta este valor para centrar más a la derecha */
+}
+
+/* Título principal */
+.main-title {
+  font-size: 1.5rem; /* Reducido tamaño de la fuente */
+  font-weight: normal; /* Quitar el bold */
+  margin: 0; /* Sin margen */
+  color: #333;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: 2.3rem; /* Más pequeño que el título principal */
+  margin: 10px 0; /* Margen entre títulos */
+  font-style: bold;
+  color: #fff;
+}
+
+/* Botón de descargar CV */
+.download-btn {
+  display: inline-block; /* Mostrar como bloque en línea */
+  margin-top: 50px; /* Espaciado superior */
+  padding: 12px 25px; /* Espaciado interno del botón */
+  background-color: #000000; /* Color de fondo */
+  color: white; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s ease, transform 0.2s; /* Transiciones suaves */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para efecto de profundidad */
+}
+
+/* Efecto hover en el botón */
+.download-btn:hover {
+  background-color: #002d5e; /* Cambia el color de fondo */
+  transform: translateY(-2px); /* Levanta el botón */
+}
+
+/* Contenedor del logo */
+.logo-container {
+  display: flex;
+  justify-content: flex-end; /* Alinear a la derecha */
+  width: 1420px; /* Ancho completo del contenedor */
+  align-items: flex-start; /* Alinear el logo en la parte superior */
+  position: relative; /* Habilitar posicionamiento relativo */
+}
+
+/* Logo */
+.logo {
+  max-width: 400px; /* Aumentar tamaño del logo */
+  height: auto; /* Mantener la proporción */
+  margin-top: -300px; /* Desplazar hacia arriba */
+}
+
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* Sección Acerca de Mí */
+.section-about {
+  background-image: url('../imagenes/fondo-home_derecha.jpg'); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre toda la sección */
+  background-position: center; /* Centra la imagen */
+  padding: 50px 20px; /* Ajuste de padding (espacio interior) */
+  text-align: center; /* Centrar el texto */
+  color: #333; /* Color de texto blanco para contraste */
+  font-family: 'Poppins', sans-serif;
+  min-height: 360px; /* Altura mínima de la sección */
+}
+
+.section-about h2 {
+  font-size: 36px; /* Tamaño del título */
+  margin-bottom: 45px;
+}
+
+.section-about p {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+/* Sección Portfolio */
+.portfolio-section {
+  background-image: url('../imagenes/fondo-portfolio.jpg'); /* Imagen de fondo */
+  background-size: cover; /* La imagen cubre toda la sección */
+  background-position: center; /* Centra la imagen */
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  min-height: 360px; /* Altura mínima de la sección */
+  display: block;
+}
+
+.portfolio-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Estilo de la cuadrícula de imágenes */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+  gap: 50px; /* Espacio entre las imágenes */
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden; /* Para asegurar que el botón se mantenga dentro de los bordes */
+  border-radius: 10px; /* Borde redondeado en las imágenes */
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 300px; /* Ajusta la altura según necesites */
+  object-fit: cover; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto de hover para oscurecer la imagen */
+.portfolio-item:hover img {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+  filter: brightness(0.7); /* Oscurece la imagen */
+}
+
+/* Botón de Ver más */
+.view-more {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0074ff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none; /* Sin subrayado */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* Botón visible solo cuando se pasa el ratón por encima */
+.portfolio-item:hover .view-more {
+  opacity: 1;
+}
+
+/* Cambia el color del botón al hacer hover */
+.view-more:hover {
+  background-color: #005bb5;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Animation for modal */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+/* Sección Blog */
+.blog-section {
+  padding: 50px 20px;
+  background-color: #333;
+  text-align: center;
+  min-height: 300px; /* Altura mínima de la sección */
+}
+
+.blog-section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+/* Estilo de la cuadrícula de imágenes del blog */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columnas */
+  gap: 50px; /* Espacio entre las imágenes */
+}
+
+.blog-item {
+  position: relative;
+  overflow: hidden; /* Para asegurar que el botón se mantenga dentro de los bordes */
+  border-radius: 10px; /* Borde redondeado en las imágenes */
+}
+
+.blog-item img {
+  width: 100%;
+  height: 400px; /* Ajusta la altura según necesites */
+  object-fit: cover; /* Mantiene la proporción de las imágenes */
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto de hover para oscurecer la imagen */
+.blog-item:hover img {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al hacer hover */
+  filter: brightness(0.7); /* Oscurece la imagen */
+}
+
+/* Botón de Ver más */
+.view-more {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0074ff;
+  color: white;
+  border: none;
+  padding: 8px 15px; /* Tamaño del botón reducido */
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+/* Botón visible solo cuando se pasa el ratón por encima */
+.blog-item:hover .view-more {
+  opacity: 1;
+}
+
+/* Cambia el color del botón al hacer hover */
+.view-more:hover {
+  background-color: #005bb5;
+}
+
+/* Contenedor para el botón Ver más */
+.see-more-container {
+  text-align: center; /* Centrar el botón */
+  margin-top: 60px; /* Espacio superior */
+}
+
+.see-more-button {
+  background-color: #0074ff; /* Color del fondo */
+  color: white; /* Color del texto */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Sin subrayado */
+  font-family: 'Poppins', sans-serif; /* Fuente Poppins */
+  font-weight: bold; /* Negrita */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.see-more-button:hover {
+  background-color: #005bb5; /* Color más oscuro al pasar el ratón */
+}
+
+
+
+/* Sección Contacto */
+.section-contact {
+  padding: 50px;
+  background-color: #005bb5; /* Morado */
+  text-align: center;
+  color: white;
+  min-height: 300px; /* Altura mínima de la sección */
+}
+
+.section-contact h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.contact-icons a {
+  margin: 0 15px;
+  display: inline-block;
+  color: white;
+}
+
+.contact-icons img {
+  width: 50px; /* Tamaño de los iconos */
+  height: 50px; /* Tamaño de los iconos */
+  transition: transform 0.3s ease; /* Efecto al pasar el mouse */
+}
+
+.contact-icons a:hover img {
+  transform: scale(1.1); /* Efecto de escalado */
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  background-color: #333;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  min-height: 200px; /* Altura mínima de la sección */
+}
+
+/* Logo en el Footer */
+.footer-logo {
+  width: 100px; /* Ajusta el tamaño deseado */
+  height: auto; /* Mantiene la relación de aspecto */
+  margin-left: 890px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.footer p {
+  margin: 10px 0;
+}
+
+
+/* --- Estilos para Teléfonos (<480px) --- */
+@media (max-width: 479px) {
+
+  /* Mostrar el menú hamburguesa */
+  .hamburger-menu {
+    display: block; /* Asegura que el botón sea visible */
+    position: absolute; /* Posición absoluta para colocarlo sobre el navbar */
+    top: 23px; /* Ajusta según lo necesario */
+    right: 20px; /* Ajusta según lo necesario */
+    width: 24px; /* Tamaño del botón */
+    height: 24px; /* Tamaño del botón */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  }
+  
+  /* Líneas del icono hamburguesa */
+  .hamburger-menu .line {
+    width: 100%;
+    height: 2px; /* Grosor de las líneas */
+    background-color: #fff; /* Color de las líneas */
+    margin: 4px 0; /* Espaciado entre las líneas */
+    transition: all 0.3s ease;
+  }
+  
+  /* Ocultar el menú completo por defecto */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 60px;
+    right: 10px; /* Ajustamos la posición */
+    background-color: #333;
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 80%; /* Hacemos el menú más pequeño */
+    height: auto;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    z-index: 999;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-10px); /* Efecto de subida */
+  }
+   /* Estilo para cada enlace del menú */
+   .navbar-menu a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Separación entre secciones */
+  }
+
+  .navbar-menu a:last-child {
+    border-bottom: none; /* Eliminar el borde del último elemento */
+  }
+
+  /* Mostrar el menú con la animación */
+  .navbar-menu.active {
+    display: flex;
+    opacity: 1; /* Hacer visible */
+    transform: translateY(0); /* Elimina la traslación vertical */
+  }
+
+  /* Animación del botón hamburguesa */
+  .hamburger-menu.active .line {
+    background-color: #0074ff;
+  }
+  
+  .hamburger-menu.active .line.top {
+    transform: rotate(45deg) translate(5px, 5px); /* Ajusta la rotación para formar la X */
+  }
+
+  .hamburger-menu.active .line.middle {
+    opacity: 0; /* Ocultar la línea del medio */
+  }
+
+  .hamburger-menu.active .line.bottom {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotación inversa para la X */
+  }
+  
+  .navbar-logo {
+    font-size: 18px;
+    margin-left: 30px;
+  }
+
+  .navbar-menu {
+    display: none; /* Menú hamburguesa visible por defecto */
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-right: 20px;
+  }
+
+  /* Sección Home */
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-image: url('../imagenes/fondo-home.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: auto; /* Deja que la altura sea automática */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  }
+
+  .home-content {
+    margin-left: 0;
+    max-width: 479px; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centrar el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-title {
+    font-size: 1.3rem; /* Tamaño más pequeño para móviles */
+    color: #fff; /* Asegura buena legibilidad sobre la imagen */
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  /* Asegura que las imágenes no sobrepasen el ancho de la pantalla */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo-container {
+    justify-content: center;
+    margin-top: -40px;
+    width: 240px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  
+  .section-about h2 {
+    margin-top: 350px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 20px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr; /* Una columna */
+    gap: 20px;
+  }
+
+  /* Iconos de la sección Contacto */
+  .contact-icons {
+    display: flex; /* Alineación en fila */
+    justify-content: center; /* Centrar los íconos horizontalmente */
+    gap: 20px; /* Espacio entre los íconos */
+    flex-direction: row; /* Mostrar los iconos en fila horizontal */
+  }
+
+  /* Reducir el tamaño de los íconos */
+  .contact-icons img {
+    width: 35px; /* Tamaño más pequeño para los íconos */
+    height: 35px;
+  }
+
+  .footer-logo {
+    display: block;
+    margin: 0 auto; /* Centrar el logo horizontalmente */
+    margin-bottom: 30px;
+    width: 80px; /* Ajustar el tamaño del logo */
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1023px) {
+  /* Mostrar el menú hamburguesa */
+  .hamburger-menu {
+    display: block; /* Asegura que el botón sea visible */
+    position: absolute; /* Posición absoluta para colocarlo sobre el navbar */
+    top: 23px; /* Ajusta según lo necesario */
+    right: 20px; /* Ajusta según lo necesario */
+    width: 24px; /* Tamaño del botón */
+    height: 24px; /* Tamaño del botón */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  }
+  
+  /* Líneas del icono hamburguesa */
+  .hamburger-menu .line {
+    width: 100%;
+    height: 2px; /* Grosor de las líneas */
+    background-color: #fff; /* Color de las líneas */
+    margin: 4px 0; /* Espaciado entre las líneas */
+    transition: all 0.3s ease;
+  }
+  
+  /* Ocultar el menú completo por defecto */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 60px;
+    right: 10px; /* Ajustamos la posición */
+    background-color: #333;
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 80%; /* Hacemos el menú más pequeño */
+    height: auto;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    z-index: 999;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-10px); /* Efecto de subida */
+  }
+   /* Estilo para cada enlace del menú */
+   .navbar-menu a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Separación entre secciones */
+  }
+
+  .navbar-menu a:last-child {
+    border-bottom: none; /* Eliminar el borde del último elemento */
+  }
+
+  /* Mostrar el menú con la animación */
+  .navbar-menu.active {
+    display: flex;
+    opacity: 1; /* Hacer visible */
+    transform: translateY(0); /* Elimina la traslación vertical */
+  }
+
+  /* Animación del botón hamburguesa */
+  .hamburger-menu.active .line {
+    background-color: #0074ff;
+  }
+  
+  .hamburger-menu.active .line.top {
+    transform: rotate(45deg) translate(5px, 5px); /* Ajusta la rotación para formar la X */
+  }
+
+  .hamburger-menu.active .line.middle {
+    opacity: 0; /* Ocultar la línea del medio */
+  }
+
+  .hamburger-menu.active .line.bottom {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotación inversa para la X */
+  }
+  
+  .navbar-logo {
+    font-size: 18px;
+    margin-left: 30px;
+  }
+
+  .navbar-menu {
+    display: none; /* Menú hamburguesa visible por defecto */
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-right: 20px;
+  }
+
+  /* Sección Home */
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-image: url('../imagenes/fondo-home.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: auto; /* Deja que la altura sea automática */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  }
+
+  .home-content {
+    margin-left: 0;
+    max-width: 479px; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centrar el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-title {
+    font-size: 1.3rem; /* Tamaño más pequeño para móviles */
+    color: #fff; /* Asegura buena legibilidad sobre la imagen */
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  /* Asegura que las imágenes no sobrepasen el ancho de la pantalla */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo-container {
+    justify-content: center;
+    margin-top: -40px;
+    width: 240px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  
+  .section-about h2 {
+    margin-top: 350px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: auto auto; /* Una columna */
+    gap: 20px;
+  }
+
+  .blog-grid {
+    grid-template-columns: auto auto; /* Una columna */
+    gap: 20px;
+  }
+
+  /* Iconos de la sección Contacto */
+  .contact-icons {
+    display: flex; /* Alineación en fila */
+    justify-content: center; /* Centrar los íconos horizontalmente */
+    gap: 20px; /* Espacio entre los íconos */
+    flex-direction: row; /* Mostrar los iconos en fila horizontal */
+  }
+
+  /* Reducir el tamaño de los íconos */
+  .contact-icons img {
+    width: 35px; /* Tamaño más pequeño para los íconos */
+    height: 35px;
+  }
+
+  .footer-logo {
+    display: block;
+    margin: 0 auto; /* Centrar el logo horizontalmente */
+    margin-bottom: 30px;
+    width: 80px; /* Ajustar el tamaño del logo */
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1919px) {
+  /* Mostrar el menú hamburguesa */
+  .hamburger-menu {
+    display: block; /* Asegura que el botón sea visible */
+    position: absolute; /* Posición absoluta para colocarlo sobre el navbar */
+    top: 23px; /* Ajusta según lo necesario */
+    right: 20px; /* Ajusta según lo necesario */
+    width: 24px; /* Tamaño del botón */
+    height: 24px; /* Tamaño del botón */
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté por encima de otros elementos */
+  }
+  
+  /* Líneas del icono hamburguesa */
+  .hamburger-menu .line {
+    width: 100%;
+    height: 2px; /* Grosor de las líneas */
+    background-color: #fff; /* Color de las líneas */
+    margin: 4px 0; /* Espaciado entre las líneas */
+    transition: all 0.3s ease;
+  }
+  
+  /* Ocultar el menú completo por defecto */
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    top: 60px;
+    right: 10px; /* Ajustamos la posición */
+    background-color: #333;
+    border-radius: 10px; /* Esquinas redondeadas */
+    width: 80%; /* Hacemos el menú más pequeño */
+    height: auto;
+    padding: 15px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    z-index: 999;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animación suave */
+    opacity: 0; /* Inicialmente oculto */
+    transform: translateY(-10px); /* Efecto de subida */
+  }
+   /* Estilo para cada enlace del menú */
+   .navbar-menu a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #444; /* Separación entre secciones */
+  }
+
+  .navbar-menu a:last-child {
+    border-bottom: none; /* Eliminar el borde del último elemento */
+  }
+
+  /* Mostrar el menú con la animación */
+  .navbar-menu.active {
+    display: flex;
+    opacity: 1; /* Hacer visible */
+    transform: translateY(0); /* Elimina la traslación vertical */
+  }
+
+  /* Animación del botón hamburguesa */
+  .hamburger-menu.active .line {
+    background-color: #0074ff;
+  }
+  
+  .hamburger-menu.active .line.top {
+    transform: rotate(45deg) translate(5px, 5px); /* Ajusta la rotación para formar la X */
+  }
+
+  .hamburger-menu.active .line.middle {
+    opacity: 0; /* Ocultar la línea del medio */
+  }
+
+  .hamburger-menu.active .line.bottom {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotación inversa para la X */
+  }
+  
+  .navbar-logo {
+    font-size: 18px;
+    margin-left: 30px;
+  }
+
+  .navbar-menu {
+    display: none; /* Menú hamburguesa visible por defecto */
+  }
+
+  .hamburger-menu {
+    display: block;
+    margin-right: 20px;
+  }
+
+  /* Sección Home */
+  .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    background-image: url('../imagenes/fondo-home.jpg'); /* Imagen de fondo */
+    background-size: cover; /* Cubre todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: auto; /* Deja que la altura sea automática */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  }
+
+  .home-content {
+    margin-left: 0;
+    max-width: 479px; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centrar el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .main-title {
+    font-size: 1.3rem; /* Tamaño más pequeño para móviles */
+    color: #fff; /* Asegura buena legibilidad sobre la imagen */
+    text-align: center;
+    margin-top: 60px;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .download-btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    text-decoration: none;
+    justify-content: center;
+  }
+
+  /* Asegura que las imágenes no sobrepasen el ancho de la pantalla */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .logo-container {
+    justify-content: center;
+    margin-top: -40px;
+    width: 240px;
+  }
+
+  .logo {
+    width: 50%;
+  }
+
+  
+  .section-about h2 {
+    margin-top: 350px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: auto auto auto; /* Una columna */
+    gap: 20px;
+  }
+
+  .portfolio-section {
+    background-image: url('../imagenes/fondo2.jpg'); /* Imagen de fondo */
+
+  }
+  
+
+  .blog-grid {
+    grid-template-columns: auto auto; /* Una columna */
+    gap: 20px;
+  }
+
+  /* Iconos de la sección Contacto */
+  .contact-icons {
+    display: flex; /* Alineación en fila */
+    justify-content: center; /* Centrar los íconos horizontalmente */
+    gap: 20px; /* Espacio entre los íconos */
+    flex-direction: row; /* Mostrar los iconos en fila horizontal */
+  }
+
+  /* Reducir el tamaño de los íconos */
+  .contact-icons img {
+    width: 35px; /* Tamaño más pequeño para los íconos */
+    height: 35px;
+  }
+
+  .footer-logo {
+    display: block;
+    margin: 0 auto; /* Centrar el logo horizontalmente */
+    margin-bottom: 30px;
+    width: 80px; /* Ajustar el tamaño del logo */
+    margin-top: 20px;
+  }
+}
