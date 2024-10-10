@@ -6,12 +6,12 @@ window.onload = function() {
   // Botón para español
   const spanishBtn = document.getElementById('spanish-btn');
   spanishBtn.addEventListener('click', function() {
-    window.location.href = 'code/index.html'; // Redirigir a la versión en español
+    window.location.href = 'code/main.html'; // Redirigir a la versión en español
   });
 
   // Botón para inglés
   const englishBtn = document.getElementById('english-btn');
   englishBtn.addEventListener('click', function() {
-    window.location.href = 'code/index2.html'; // Redirigir a la versión en inglés
+    window.location.href = 'code/main2.html'; // Redirigir a la versión en inglés
   });
 };
